@@ -17,14 +17,18 @@ namespace Labb2_ConsolePong
             y = startY;
             size = paddleSize;
         }
-        void Move(int yAmount)
+        public void Move(int yAmount)
         {
             y += yAmount;
         }
         public void Draw()
           
         {
-           for (int i = 0; i )
+            for (int i = 0; i < size; i++)
+            {
+                Console.SetCursorPosition(3,10);
+                Console.Write("|");
+            } 
         }
     
     }
