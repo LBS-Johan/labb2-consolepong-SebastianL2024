@@ -38,22 +38,22 @@ namespace Labb2_ConsolePong
             // Flytta paddel 1 (Uparrow/Downarrow)
             if (Input.IsPressed(ConsoleKey.UpArrow))
             {
-                paddle1.Move(-1);
+                paddle1.Move(1);
                 //Flytta spelare 1 uppåt
             }
             if (Input.IsPressed(ConsoleKey.DownArrow))
             {
-                paddle1.Move(1);
+                paddle1.Move(-1);
                 //Flytta spelare 1 nedåt
             }
             if (Input.IsPressed(ConsoleKey.W))
             {
-                paddle2.Move(-1);
+                paddle2.Move(1);
                 //Flytta spelare 2 uppåt
             }
             if (Input.IsPressed(ConsoleKey.S))
             {
-                paddle2.Move(1);
+                paddle2.Move(-1);
                 //Flytta spelare 2 nedåt
             }
             ball.Move();
