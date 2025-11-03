@@ -6,8 +6,9 @@
         {
             int gameSpeed = 100; //milliseconds per update
             Game game = new Game();
-            game.StartGame();
+            game.StartGame(); // Initiera spelet
 
+             // Huvudloopen
             while (true)
             {
                 if (game.Run() == false)
@@ -16,7 +17,7 @@
                     break;
                 }
 
-                Thread.Sleep(gameSpeed);
+                Thread.Sleep(gameSpeed); // Vänta lite mellan uppdateringar
             }
         }
     }

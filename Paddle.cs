@@ -5,19 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Labb2_ConsolePong
-{
+{ // Klassen Paddle hanterar spelarnas paddlar
     internal class Paddle
     {
       public int x;
       public int y;
       public int size;
+        // Konstruktor – sätter startposition och storlek
        public Paddle(int startX,int startY,int paddleSize)
         {
             x = startX;
             y = startY;
             size = paddleSize;
         }
-        public void Move(int yAmount)
+        public void Move(int yAmount) // Flyttar paddeln uppåt eller nedåt
         {
             y -= yAmount;
 
@@ -29,8 +30,8 @@ namespace Labb2_ConsolePong
             if (y + size > Console.WindowHeight)
                 y = Console.WindowHeight - size;
         }
-        public void Draw()
-          
+        public void Draw()    // Ritar paddeln som ett lodrätt streck på skärmen
+
         {
             for (int i = 0; i < size; i++)
             {

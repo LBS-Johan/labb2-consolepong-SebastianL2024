@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Labb2_ConsolePong
-{
-    internal class Game
+{  
+    internal class Game  // Klassen Game styr hela spelets logik (initiering, input, rörelse, rendering)
     {
         int width;
         int height;
@@ -15,7 +15,7 @@ namespace Labb2_ConsolePong
         Paddle paddle1;
         Paddle paddle2;
         Ball ball;
-        public void StartGame()
+        public void StartGame()  // Startar spelet och sätter upp alla objekt
         {
             // Setup konsol-fönstret
             width = Console.WindowWidth;
@@ -56,10 +56,10 @@ namespace Labb2_ConsolePong
                 paddle2.Move(-1);
                 //Flytta spelare 2 nedåt
             }
+            // Flytta bollen och kontrollera kollisioner
             ball.Move();
-
             ball.CheckCollisions(paddle1, paddle2, width, height);
-
+            // Rita ut alla objekt
             paddle1.Draw();
             paddle2.Draw();
             ball.Draw();
